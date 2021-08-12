@@ -14,8 +14,11 @@ def filter_env(env):
 
 
 def app(environ, start_response):
-    start_response("200 OK", [("Content-type", "application/json; charset=utf-8")])
-    return [json.dumps(filter_env(environ), indent=2).encode(), sys.version.split()[0]]
+    start_response("200 OK", [
+        ("Content-type", "application/json; charset=utf-8"),
+        ("Version": sys.version.split()[0]),
+    ])
+    return [json.dumps(filter_env(environ), indent=2).encode()]
 
 
 simple_server.ServerHandler.server_software = ""
