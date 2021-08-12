@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 from wsgiref import simple_server
 
 
@@ -14,7 +15,7 @@ def filter_env(env):
 
 def app(environ, start_response):
     start_response("200 OK", [("Content-type", "application/json; charset=utf-8")])
-    return [json.dumps(filter_env(environ), indent=2).encode()]
+    return [json.dumps(filter_env(environ), indent=2).encode(), sys.version.split()[0]]
 
 
 simple_server.ServerHandler.server_software = ""
