@@ -16,7 +16,7 @@ def filter_env(env):
 def app(environ, start_response):
     start_response("200 OK", [
         ("Content-type", "application/json; charset=utf-8"),
-        ("Version": sys.version.split()[0]),
+        ("Version", sys.version.split()[0]),
     ])
     return [json.dumps(filter_env(environ), indent=2).encode()]
 
