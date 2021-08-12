@@ -1,0 +1,7 @@
+{
+  "name": "Python WSGI app",
+  "description": "Just a tiny simple app",
+  "repository": "https://github.com/andreif/wsgi",
+  "logo": "http://i.imgur.com/12s2VoU.png",
+  "keywords": []
+}
