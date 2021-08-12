@@ -18,7 +18,7 @@ def app(environ, start_response):
 
 
 simple_server.ServerHandler.server_software = ""
-port = os.environ.get("PORT", 8000)
+port = int(os.environ.get("PORT", 8000))
 with simple_server.make_server(host="", port=port, app=app) as httpd:
     print(f"Serving on port {port}...")
     httpd.serve_forever()
