@@ -8,7 +8,7 @@ def app(environ, start_response):
         ("Content-type", "text/plain; charset=utf-8"),
         ("Version", sys.version.split()[0]),
     ])
-    return ["Hello"]
+    return [b"Hello"]
 
 
 simple_server.ServerHandler.server_software = ""
