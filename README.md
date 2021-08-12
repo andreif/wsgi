@@ -2,9 +2,9 @@
 
 ```sh
 # create a new app
-heroku create myapp --buildpack https://github.com/andreif/heroku-buildpack-py.git
+heroku create myapp --buildpack https://github.com/andreif/wsgi.git
 
 # or set for existing
-heroku buildpacks:set https://github.com/andreif/heroku-buildpack-py.git -a myapp
+heroku buildpacks:set https://github.com/andreif/wsgi.git -a myapp
 ```
 See https://devcenter.heroku.com/articles/buildpacks
